@@ -1,0 +1,35 @@
+{
+  "name": "@xiongyongsheng/mp-weixin-auth-vue",
+  "version": "1.0.0",
+  "description": "微信端H5授权插件",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "tsc --watch",
+    "build": "tsc",
+    "prepublishOnly": "pnpm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "vue": "^3.3.4",
+    "vue-router": "^4.2.4",
+    "@xiongyongsheng/tool": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.5.9",
+    "typescript": "^5.2.2"
+  },
+  "keywords": [
+    "mp-weixin",
+    "auth",
+    "h5"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "author": "xiongyongsheng",
+  "license": "ISC"
+}
