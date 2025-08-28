@@ -63,9 +63,8 @@ export default {
 
     // 添加路由守卫
     router.beforeEach(async (to: RouteLocationNormalized, from, next) => {
+      const isAuthorized = await checkAuth(to, from, next);
       if (to.meta.requiresAuth) {
-        const isAuthorized = await checkAuth(to, from, next);
-
         if (!isAuthorized && isWeiXin()) {
           // 调用微信授权
           wxAuth({

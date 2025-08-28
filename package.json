@@ -1,6 +1,6 @@
 {
   "name": "@xiongyongsheng/mp-weixin-auth-vue",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "微信端H5授权插件",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
