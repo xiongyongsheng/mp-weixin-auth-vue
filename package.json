@@ -1,26 +1,36 @@
 {
   "name": "@xiongyongsheng/mp-weixin-auth-vue",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "微信端H5授权插件",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "files": [
-    "dist"
-  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs",
+      "default": "./dist/index.mjs"
+    },
+    "./package.json": "./package.json"
+  },
   "scripts": {
-    "dev": "tsc --watch",
-    "build": "tsc",
-    "prepublishOnly": "pnpm run build",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "type-check": "tsc --noEmit",
+    "prepublishOnly": "pnpm run build"
   },
   "dependencies": {
+    "@xiongyongsheng/tool": "^1.0.0",
     "vue": "^3.3.4",
-    "vue-router": "^4.2.4",
-    "@xiongyongsheng/tool": "^1.0.0"
+    "vue-router": "^4.2.4"
   },
   "devDependencies": {
     "@types/node": "^20.5.9",
-    "typescript": "^5.2.2"
+    "typescript": "^5.2.2",
+    "vite": "^7.1.4",
+    "vite-plugin-dts": "^4.5.4"
   },
   "keywords": [
     "mp-weixin",
