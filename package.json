@@ -41,5 +41,9 @@
     "access": "public"
   },
   "author": "xiongyongsheng",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xiongyongsheng/mp-weixin-auth-vue.git"
+  },
   "license": "ISC"
 }
